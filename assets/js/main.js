@@ -46,5 +46,16 @@ const team = [
 for ( let i=0; i < team.length; i++) {
     let currentElement = team[i];
     console.log(team[i]);
+    document.getElementById('cards').innerHTML += `
+    <div class="col-4 d-flex align-items-center justify-content-center">
+        <div class="card align-items-center" style="width: 18rem;">
+            <img src= assets/img/${currentElement.image} class="card-img-top" alt="...">
+                <div class="card-body p-2">
+                    <h5 class="card-title">${currentElement.name}</h5>
+                    <p class="card-text">${currentElement.role}</p>
+                </div>
+        </div>
+    </div>`
+
 
 }
